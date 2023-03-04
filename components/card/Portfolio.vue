@@ -2,7 +2,7 @@
   <div class="card-portfolio">
     <!-- <nuxt-link :to="`/blogs/${item.id}`"> -->
     <div class="card-portfolio__img">
-      <div class="slider-container">
+      <!-- <div class="slider-container">
         <swiper
           v-if="item.img.length > 0"
           :loop="true"
@@ -21,11 +21,11 @@
             <div class="swiper-pagination"></div>
           </template>
         </swiper>
-      </div>
-      <!-- <img
+      </div> -->
+      <img
         :src="require(`@/assets/img/static/portfolio/${item.img}`)"
         alt="Projects"
-      /> -->
+      />
       <div class="card-portfolio__img--tag">
         <p>{{ item.tag }}</p>
       </div>
@@ -79,21 +79,21 @@
 </template>
 
 <script>
-import { Navigation, Pagination, Autoplay } from "swiper";
-import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
-import "swiper/swiper-bundle.css";
+// import { Navigation, Pagination, Autoplay } from "swiper";
+// import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
+// import "swiper/swiper-bundle.css";
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+// SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default {
   name: "CardArticles",
   props: {
     item: Object,
   },
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
+  // components: {
+  //   Swiper,
+  //   SwiperSlide,
+  // },
   data() {
     return {
       settingsImgSlider: {
